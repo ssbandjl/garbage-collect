@@ -13,8 +13,9 @@ assert(){
 read_dir(){
     for file in `ls $1`
     do
-     if [ -d $1"/"$file ] ; then
-        assert $1"/"$file
+     if [ -d $1$file ] ; then
+        echo -e "-------------- dir:$1$file"
+        assert "$1$file"
         echo "\033[32m [compile] $file pass! \033[0m \n"
      fi
     done

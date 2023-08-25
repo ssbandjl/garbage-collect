@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(gc)
 
-set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -w")
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -w -Og")
 
 include_directories(. atomic cache central mgc heap malloc span proc sys)
 

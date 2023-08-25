@@ -1,0 +1,10 @@
+标记清扫: /root/github/project/gc/garbage-collect/mark-sweep
+
+cd dir; make; ./gc
+
+cd gc-golang; make; ./gc -> test.c -> void main() -> osinit
+mallocinit() -> numSpanClasses 134
+  sys_alloc -> mmap
+pthread_create(&tid,NULL,alloc,0) -> void* alloc(void* arg)
+  分配内存
+
